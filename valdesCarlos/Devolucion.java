@@ -1,4 +1,4 @@
-package valdesCarlos;
+package Personal_Programacion.valdesCarlos; 
 
 public class Devolucion {
     private Usuario usuario;
@@ -11,17 +11,12 @@ public class Devolucion {
 
     public boolean realizarDevolucion() {
         if (usuario.tieneLibroPrestado()) {
-            if (libro.getTitulo().equals(usuario.getLibroPrestado().getTitulo())) {
-                usuario.devolverLibro();
-                libro.marcarComoDisponible();
-                System.out.println("El libro \"" + libro.getTitulo() + "\" ha sido devuelto correctamente.");
-                return true;
-            } else {
-                System.out.println("El usuario no tiene este libro prestado.");
-                return false;
-            }
+            usuario.devolverLibro();
+            libro.marcarComoDisponible();
+            System.out.println("Libro devuelto correctamente.");
+            return true;
         } else {
-            System.out.println("El usuario no tiene ningún libro prestado.");
+            System.out.println("El usuario no tiene libros prestados, no se puede devolver nada.");
             return false;
         }
     }

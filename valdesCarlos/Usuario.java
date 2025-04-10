@@ -1,14 +1,14 @@
-package valdesCarlos;
+package Personal_Programacion.valdesCarlos;
 
 public class Usuario {
     private String nombre;
     private String apellido;
-    private Libro libroPrestado;
+    private boolean tieneLibro;
 
     public Usuario(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.libroPrestado = null;
+        this.tieneLibro = false;
     }
 
     public String getNombre() {
@@ -20,26 +20,14 @@ public class Usuario {
     }
 
     public boolean tieneLibroPrestado() {
-        return libroPrestado != null;
+        return tieneLibro;
     }
 
-    public Libro getLibroPrestado() {
-        return libroPrestado;
-    }
-
-    public void asignarLibro(Libro libro) {
-        this.libroPrestado = libro;
+    public void asignarLibro() {
+        tieneLibro = true;
     }
 
     public void devolverLibro() {
-        this.libroPrestado = null;
-    }
-
-    public void mostrarEstado() {
-        if (tieneLibroPrestado()) {
-            System.out.println("El usuario " + nombre + " " + apellido + " tiene prestado el libro: \"" + libroPrestado.getTitulo() + "\".");
-        } else {
-            System.out.println("El usuario " + nombre + " " + apellido + " no tiene ningún libro prestado.");
-        }
+        tieneLibro = false;
     }
 }

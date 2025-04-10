@@ -1,4 +1,4 @@
-package valdesCarlos;
+package Personal_Programacion.valdesCarlos;
 
 public class Libro {
     private String titulo;
