@@ -3,12 +3,12 @@ package valdesCarlos;
 public class Usuario {
     private String nombre;
     private String apellido;
-    private boolean tieneLibro;
+    private Libro libroPrestado;
 
     public Usuario(String nombre, String apellido) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.tieneLibro = false; 
+        this.libroPrestado = null;
     }
 
     public String getNombre() {
@@ -20,20 +20,24 @@ public class Usuario {
     }
 
     public boolean tieneLibroPrestado() {
-        return tieneLibro;  
+        return libroPrestado != null;
     }
 
-    public void asignarLibro() {
-        this.tieneLibro = true;  
+    public Libro getLibroPrestado() {
+        return libroPrestado;
+    }
+
+    public void asignarLibro(Libro libro) {
+        this.libroPrestado = libro;
     }
 
     public void devolverLibro() {
-        this.tieneLibro = false;  
+        this.libroPrestado = null;
     }
 
     public void mostrarEstado() {
         if (tieneLibroPrestado()) {
-            System.out.println("El usuario " + nombre + " " + apellido + " tiene un libro prestado.");
+            System.out.println("El usuario " + nombre + " " + apellido + " tiene prestado el libro: \"" + libroPrestado.getTitulo() + "\".");
         } else {
             System.out.println("El usuario " + nombre + " " + apellido + " no tiene ningún libro prestado.");
         }
