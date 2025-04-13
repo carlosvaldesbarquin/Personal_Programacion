@@ -23,12 +23,8 @@ public class Producto {
         return disponible;
     }
 
-    public boolean marcarNoDisponible() {
-        if (disponible) {
-            disponible = false;
-            return true; 
-        }
-        return false; 
+    public void marcarNoDisponible() {
+        this.disponible = false;
     }
 
     public void mostrarInfo() {
