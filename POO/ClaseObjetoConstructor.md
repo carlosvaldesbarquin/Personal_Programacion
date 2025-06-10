@@ -5,14 +5,14 @@ Define qué atributos (datos) y qué métodos (acciones) tienen los objetos.
 
 🔧 Ejemplo en Java:
 
-public class Perro {
-    String nombre;
-    int edad;
+    public class Perro {
+        String nombre;
+        int edad;
 
-    void ladrar() {
-        System.out.println("Guau guau");
+        void ladrar() {
+            System.out.println("Guau guau");
+        }
     }
-}
 
 
 
@@ -26,20 +26,20 @@ Sirve para inicializar los valores del objeto.
 
 🔧 Ejemplo:
 
-public class Perro {
-    String nombre;
-    int edad;
+    public class Perro {
+        String nombre;
+        int edad;
 
-    // Constructor
-    public Perro(String nombrePerro, int edadPerro) {
+        // Constructor
+        public Perro(String nombrePerro, int edadPerro) {
         nombre = nombrePerro;
         edad = edadPerro;
     }
 
-    void ladrar() {
-        System.out.println(nombre + " dice: Guau!");
+        void ladrar() {
+            System.out.println(nombre + " dice: Guau!");
+        }
     }
-}
 
 
 
@@ -53,12 +53,12 @@ Es algo real en la memoria, creado a partir de la clase.
 🔧 Ejemplo:
 
 
-public class Main {
-    public static void main(String[] args) {
+    public class Main {
+        public static void main(String[] args) {
         Perro miPerro = new Perro("Firulais", 3);  // ← Objeto creado
         miPerro.ladrar();  // Muestra: Firulais dice: Guau!
+        }
     }
-}
 
 
 
