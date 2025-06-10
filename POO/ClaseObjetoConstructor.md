@@ -13,6 +13,9 @@ public class Perro {
         System.out.println("Guau guau");
     }
 }
+
+
+
 Esto es una clase llamada Perro. Define que un perro tiene nombre, edad y puede ladrar.
 Pero no es un perro real aún, solo la receta para hacer uno.
 
@@ -37,6 +40,9 @@ public class Perro {
         System.out.println(nombre + " dice: Guau!");
     }
 }
+
+
+
 Este constructor permite crear un perro con nombre y edad personalizados.
 
 ## 🐶 3. ¿Qué es un objeto?
@@ -46,12 +52,15 @@ Es algo real en la memoria, creado a partir de la clase.
 
 🔧 Ejemplo:
 
+
 public class Main {
     public static void main(String[] args) {
         Perro miPerro = new Perro("Firulais", 3);  // ← Objeto creado
         miPerro.ladrar();  // Muestra: Firulais dice: Guau!
     }
 }
+
+
 
 Aquí, miPerro es un objeto de tipo Perro.
 Se creó usando el constructor y usa la clase como modelo.
