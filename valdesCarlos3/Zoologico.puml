@@ -1,0 +1,48 @@
+@startuml
+
+abstract class Animal {
+    - nombre : String
+    - edad : int
+    + getNombre() : String
+    + comer() : void
+}
+
+class Leon {
+    + Leon(nombre : String, edad : int)
+    + comer() : void
+    + rugir() : void
+}
+
+class Elefante {
+    + Elefante(nombre : String, edad : int)
+    + comer() : void
+    + tocarTrompa() : void
+}
+
+class Pinguino {
+    + Pinguino(nombre : String, edad : int)
+    + comer() : void
+    + nadar() : void
+}
+
+class Zoologico {
+    - animales : Animal[]
+    - cantidadAnimales : int
+    + Zoologico(int capacidad)
+    + agregarAnimal(a : Animal) : void
+    + mostrarAnimales() : void
+    + ejecutarRutinaDiaria() : void
+
+}
+
+class AplicacionZoologico {
+    + iniciar() : void
+}
+
+Animal <|-- Leon
+Animal <|-- Elefante
+Animal <|-- Pinguino
+Zoologico --> Animal
+AplicacionZoologico --> Zoologico
+
+@enduml
