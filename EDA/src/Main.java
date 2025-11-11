@@ -1,22 +1,22 @@
 public class Main {
     public static void main(String[] args) {
-        Nodo primero = new Nodo(10);
-        Nodo segundo = new Nodo(20);
-        Nodo tercero = new Nodo(30);
+        ListaEnlazada lista = new ListaEnlazada();
 
-    
 
-        primero.enlazarSiguiente(segundo);
-        primero.obtenerSiguiente().enlazarSiguiente(tercero);
+        System.out.println("Tamaño de la lista: " + lista.tamaño());
 
 
 
+        lista.agregar(100);
+        lista.agregar(400);
+        lista.agregar(800);
 
-        System.out.println("El dato obtenido es:");
-        System.out.println(primero.obtenerSiguiente().obtenerDato());
 
+        System.out.println("Tamaño de la lista: " + lista.tamaño());
 
-
+        System.out.println("Primer indice: " + lista.obtenerDato(1));
+        System.out.println("Segundo indice: " + lista.obtenerDato(2));
+        System.out.println("Tercer indice: " + lista.obtenerDato(3));
         
     }
   
