@@ -9,7 +9,7 @@ public class ListaEnlazada {
 
     }
  
-    public void agregar(int dato){
+    public void agregarDato(int dato){
         if(cabeza == null){
             cabeza = new Nodo(dato);
         } else {

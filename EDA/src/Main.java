@@ -7,9 +7,9 @@ public class Main {
 
 
 
-        lista.agregar(100);
-        lista.agregar(400);
-        lista.agregar(800);
+        lista.agregarDato(100);
+        lista.agregarDato(400);
+        lista.agregarDato(800);
 
 
         System.out.println("Tamaño de la lista: " + lista.tamaño());
